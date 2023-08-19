@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "paycontask"
+version = "0.1.0"
+description = ""
+authors = ["damiraminov1 <damiraminov1@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pygobject = "^3.44.1"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
