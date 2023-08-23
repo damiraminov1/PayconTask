@@ -9,7 +9,10 @@ readme = "README.md"
 python = "^3.11"
 pygobject = "^3.44.1"
 requests = "^2.31.0"
+pycairo = "^1.24.0"
 
+[tool.poetry.group.development.dependencies]
+black = "^23.7.0"
 
 [build-system]
 requires = ["poetry-core"]

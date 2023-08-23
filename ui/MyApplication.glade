@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="main_window">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Приложение</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <property name="gravity">center</property>
+    <child>
+      <object class="GtkFixed" id="Fixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">212</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Программа для загрузки данных</property>
+          </object>
+          <packing>
+            <property name="x">300</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="upload_from_file">
+            <property name="label" translatable="yes">Загрузить из файла</property>
+            <property name="width-request">143</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_click_upload_from_file" object="file_upload" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">500</property>
+            <property name="y">500</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkFileChooserButton" id="file_upload">
+            <property name="width-request">100</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="title" translatable="yes">Выбери файл для загрузки</property>
+            <signal name="file-set" handler="on_uploaded_file" object="upload_from_file" swapped="no"/>
+            <child internal-child="accessible">
+              <object class="AtkObject" id="file_upload-atkobject">
+                <property name="AtkObject::accessible-role">file-chooser</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">521</property>
+            <property name="y">440</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="ScrolledWindow">
+            <property name="width-request">500</property>
+            <property name="height-request">250</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="shadow-type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkAccelLabel" id="accel_label">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">156</property>
+            <property name="y">163</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="upload_from_api">
+            <property name="label" translatable="yes">Загрузить из API</property>
+            <property name="width-request">100</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_click_upload_from_api" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">160</property>
+            <property name="y">500</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="loading_window">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Загрузка</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
+    <property name="window-position">center</property>
+    <property name="default-width">440</property>
+    <property name="default-height">250</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="skip-taskbar-hint">True</property>
+    <property name="skip-pager-hint">True</property>
+    <property name="urgency-hint">True</property>
+    <property name="deletable">False</property>
+    <property name="gravity">center</property>
+    <property name="transient-for">main_window</property>
+    <property name="attached-to">main_window</property>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkSpinner">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="active">True</property>
+          </object>
+          <packing>
+            <property name="x">177</property>
+            <property name="y">54</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">173</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Пожалуйста, подождите ...</property>
+          </object>
+          <packing>
+            <property name="x">141</property>
+            <property name="y">113</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
