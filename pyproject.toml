@@ -18,5 +18,5 @@ optional = true
 black = "^23.7.0"
 
 [build-system]
-requires = ["poetry-core>1.2.0"]
+requires = ["poetry-core>=1.5.0"]
 build-backend = "poetry.core.masonry.api"

@@ -3,14 +3,12 @@ import threading
 import csv
 import time
 
-import gi
 import requests
 
 import config
 
-gi.require_version("Gdk", "3.0")
-
 from gi.repository import GLib, Gtk
+
 
 builder = Gtk.Builder()
 builder.add_from_file("ui/MyApplication.glade")
