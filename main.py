@@ -23,7 +23,7 @@ def create_thread_with_loading_window(func):
             while not loading_complete_event.is_set():
                 GLib.idle_add(loading_window.show)
                 time.sleep(0.1)
-            loading_window.destroy()
+            loading_window.hide_on_delete()
 
         def decorator_to_add_end_functionallity(func):
             def wrapper(*args, **kwargs):
