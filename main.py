@@ -2,6 +2,7 @@ import concurrent.futures
 import threading
 import csv
 import time
+from urllib.parse import unquote
 
 import requests
 
@@ -67,7 +68,8 @@ class Handler:
 
     @create_thread_with_loading_window
     def on_click_upload_from_file(self, button) -> str:
-        path: str = button.get_uri()[7:]
+        path: str = unquote(button.get_uri()[7:])
+
         with open(file=path, newline="", mode="r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
 
