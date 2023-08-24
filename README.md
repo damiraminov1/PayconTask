@@ -7,7 +7,7 @@
 sudo apt-get install -y libgirepository1.0-dev build-essential \
   libbz2-dev libreadline-dev libssl-dev zlib1g-dev libsqlite3-dev wget \
   curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libcairo2-dev \
-  libffi-dev python3.11-dev
+  libffi-dev python3.11-dev dbus-x11
 ```
 ### 2. Install Python dependencies (Poetry 1.5.0 and higher):
 ```shell
