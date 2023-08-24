@@ -7,4 +7,4 @@ python3.11 -m venv venv
 source venv/bin/activate
 pip install poetry==1.5.0
 poetry install
-poetry run python run
+poetry run python main.py
