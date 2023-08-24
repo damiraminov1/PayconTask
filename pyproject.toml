@@ -8,8 +8,8 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 pygobject = "^3.44.1"
-requests = "^2.31.0"
 pycairo = "^1.24.0"
+requests = "^2.31.0"
 
 [tool.poetry.group.development]
 optional = true
