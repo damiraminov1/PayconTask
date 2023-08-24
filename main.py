@@ -81,6 +81,9 @@ class Handler:
     def on_uploaded_file(self, button):
         button.set_sensitive(True)
 
+    def main_quit(self, window):
+        Gtk.main_quit()
+
 
 builder.connect_signals(Handler())
 window = builder.get_object("main_window")

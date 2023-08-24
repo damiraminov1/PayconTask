@@ -10,6 +10,7 @@
     <property name="default-width">800</property>
     <property name="default-height">600</property>
     <property name="gravity">center</property>
+    <signal name="destroy" handler="main_quit" swapped="no"/>
     <child>
       <object class="GtkFixed" id="Fixed">
         <property name="visible">True</property>
